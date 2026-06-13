@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>安居理財｜房貸試算與購屋指南</title>
+  <meta name="description" content="提供房貸試算工具與購屋理財文章，協助您規劃合理的住房預算。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">安居<span>理財</span></a>
+      <nav class="site-nav" aria-label="主要導覽">
+        <a href="index.html" aria-current="page">首頁</a>
+        <a href="#calculator">房貸試算</a>
+        <a href="#blog">文章專欄</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>聰明規劃房貸，<br>讓購屋更從容</h1>
+          <p>
+            買房是人生重要的財務決策。先用試算工具了解每月還款負擔，
+            再閱讀我們的購屋指南，幫助您做出更穩健的選擇。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#calculator">開始試算</a>
+            <a class="btn btn-secondary" href="#blog">閱讀文章</a>
+          </div>
+        </div>
+        <img
+          class="post-thumb"
+          src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80"
+          alt="現代住宅外觀"
+          width="900"
+          height="506"
+        >
+      </div>
+    </section>
+
+    <section class="section" id="calculator">
+      <div class="container">
+        <div class="section-header">
+          <h2>房貸試算器</h2>
+          <p>輸入貸款金額、利率與年限，快速估算每月還款與總利息。</p>
+        </div>
+
+        <div class="calculator-grid">
+          <article class="calculator-card">
+            <h2>試算條件</h2>
+            <p>以下結果僅供參考，實際核准利率與還款條件請以銀行報價為準。</p>
+
+            <form id="mortgage-form" novalidate>
+              <label>
+                貸款金額
+                <div class="input-wrap">
+                  <span class="prefix">NT$</span>
+                  <input type="number" id="principal" name="principal" min="1" step="100000" value="8000000" required>
+                </div>
+              </label>
+
+              <label>
+                年利率
+                <div class="input-wrap">
+                  <input type="number" id="rate" name="rate" min="0" max="100" step="0.01" value="2.1" required>
+                  <span class="suffix">%</span>
+                </div>
+              </label>
+
+              <label>
+                貸款年限
+                <div class="input-wrap">
+                  <input type="number" id="years" name="years" min="1" max="40" step="1" value="30" required>
+                  <span class="suffix">年</span>
+                </div>
+              </label>
+
+              <button class="btn btn-primary" type="submit">計算結果</button>
+            </form>
+
+            <p class="error" id="error" hidden></p>
+          </article>
+
+          <article class="calculator-card">
+            <h2>試算結果</h2>
+            <p>建議每月房貸支出不超過家庭月收入的三分之一。</p>
+
+            <section class="results" id="results" hidden aria-live="polite">
+              <p class="payment-label">預估每月還款</p>
+              <p class="payment" id="monthly"></p>
+
+              <dl class="summary-list">
+                <dt>貸款期間總還款</dt>
+                <dd id="total-paid"></dd>
+                <dt>總利息支出</dt>
+                <dd id="total-interest"></dd>
+              </dl>
+            </section>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="blog">
+      <div class="container">
+        <div class="section-header">
+          <h2>文章專欄</h2>
+          <p>從預算規劃到利率選擇，掌握購屋前的關鍵知識。</p>
+        </div>
+
+        <div class="blog-grid">
+          <article class="post-card">
+            <img
+              class="post-thumb"
+              src="https://images.unsplash.com/photo-1554224311-0a859925f0a2?auto=format&fit=crop&w=900&q=80"
+              alt="家庭在客廳討論購屋預算"
+              width="900"
+              height="506"
+            >
+            <div class="post-body">
+              <div class="post-meta">
+                <time datetime="2026-06-01">2026 年 6 月 1 日</time>
+                <span>購屋指南</span>
+              </div>
+              <h3>首次購屋：如何規劃合理的房貸預算？</h3>
+              <p>
+                頭期款要準備多少？每月還款占收入多少才安全？
+                本文整理首次購屋者最常忽略的預算項目。
+              </p>
+              <a class="read-more" href="blog/first-home-budget.html">閱讀全文 →</a>
+            </div>
+          </article>
+
+          <article class="post-card">
+            <img
+              class="post-thumb"
+              src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=900&q=80"
+              alt="計算機與財務文件"
+              width="900"
+              height="506"
+            >
+            <div class="post-body">
+              <div class="post-meta">
+                <time datetime="2026-05-18">2026 年 5 月 18 日</time>
+                <span>房貸知識</span>
+              </div>
+              <h3>固定利率 vs 機動利率：該怎麼選？</h3>
+              <p>
+                利率型態會直接影響長期還款成本。
+                了解兩種利率的差異，才能選到適合自己的房貸方案。
+              </p>
+              <a class="read-more" href="blog/fixed-vs-variable-rate.html">閱讀全文 →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 安居理財。內容僅供參考，不構成投資或貸款建議。</p>
+      <p>聯絡我們：hello@anjuli.example</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
