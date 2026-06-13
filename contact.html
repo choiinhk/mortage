@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>聯絡我們｜安居理財</title>
+  <meta name="description" content="聯絡安居理財團隊，洽詢房貸試算、文章合作或網站相關問題。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">安居<span>理財</span></a>
+      <nav class="site-nav" aria-label="主要導覽">
+        <a href="index.html">首頁</a>
+        <a href="index.html#calculator">房貸試算</a>
+        <a href="index.html#blog">文章專欄</a>
+        <a href="about.html">關於我們</a>
+        <a href="contact.html" aria-current="page">聯絡我們</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>聯絡我們</h1>
+        <p class="page-intro">
+          如有房貸試算、文章內容或網站使用上的問題，歡迎透過以下方式與我們聯繫。
+          我們會在 2 至 3 個工作天內回覆。
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <article class="contact-info-card">
+          <h2>聯絡資訊</h2>
+          <dl class="contact-list">
+            <div>
+              <dt>電子郵件</dt>
+              <dd><a href="mailto:hello@anjuli.example">hello@anjuli.example</a></dd>
+            </div>
+            <div>
+              <dt>服務時間</dt>
+              <dd>週一至週五 10:00 – 18:00（公眾假期除外）</dd>
+            </div>
+            <div>
+              <dt>地址</dt>
+              <dd>香港九龍尖沙咀商業區<br>（僅接受預約到訪）</dd>
+            </div>
+            <div>
+              <dt>創辦人</dt>
+              <dd>文顯楠</dd>
+            </div>
+          </dl>
+
+          <h3>常見洽詢項目</h3>
+          <ul>
+            <li>房貸試算工具使用問題</li>
+            <li>文章內容勘誤或建議</li>
+            <li>媒體合作與專欄邀稿</li>
+            <li>企業教育講座合作</li>
+          </ul>
+        </article>
+
+        <article class="contact-form-card">
+          <h2>填寫表單</h2>
+          <p>請留下您的聯絡方式，我們會盡快回覆。</p>
+
+          <form id="contact-form" novalidate>
+            <label>
+              姓名
+              <input type="text" name="name" required autocomplete="name" placeholder="請輸入您的姓名">
+            </label>
+
+            <label>
+              電子郵件
+              <input type="email" name="email" required autocomplete="email" placeholder="example@email.com">
+            </label>
+
+            <label>
+              主旨
+              <select name="subject" required>
+                <option value="">請選擇</option>
+                <option value="calculator">房貸試算相關</option>
+                <option value="article">文章內容</option>
+                <option value="media">媒體合作</option>
+                <option value="other">其他</option>
+              </select>
+            </label>
+
+            <label>
+              訊息內容
+              <textarea name="message" rows="6" required placeholder="請描述您的問題或需求"></textarea>
+            </label>
+
+            <button class="btn btn-primary" type="submit">送出訊息</button>
+            <p class="form-success" id="form-success" hidden>感謝您的來信！我們已收到訊息，將盡快回覆。</p>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 安居理財。內容僅供參考，不構成投資或貸款建議。</p>
+      <nav class="footer-nav" aria-label="頁尾導覽">
+        <a href="about.html">關於我們</a>
+        <a href="contact.html">聯絡我們</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+      event.target.reset();
+      document.getElementById('form-success').hidden = false;
+    });
+  </script>
+</body>
+</html>
